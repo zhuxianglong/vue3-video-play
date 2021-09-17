@@ -1,10 +1,3 @@
-<!--
- * @Author: web.王晓冬
- * @Date: 2021-08-19 18:56:59
- * @LastEditors: web.王晓冬
- * @LastEditTime: 2021-09-15 23:18:05
- * @Description: file content
--->
 [![Version](https://img.shields.io/npm/dt/vue3-video-play.svg?style=flat-square)](https://www.npmjs.com/package/vue3-video-play)
 [![Downloads](https://img.shields.io/npm/v/vue3-video-play.svg?style=flat-square)](https://www.npmjs.com/package/vue3-video-play)
 [![GitHub stars](https://img.shields.io/github/stars/xdlumia/vue3-video-play.svg?style=flat-square)](https://github.com/xdlumia/vue3-video-play/stargazers)

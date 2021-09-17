@@ -1,11 +1,3 @@
-/*
- * @Author: web.王晓冬
- * @Date: 2020-11-03 16:29:47
- * @LastEditors: web.王晓冬
- * @LastEditTime: 2021-09-01 12:03:22
- * @Description: file content
-*/
-
 <template>
   <div
     ref="refPlayerWrap"
@@ -44,7 +36,7 @@
         height="100%"
         :src="props.src"
         :poster="props.poster"
-      >您的浏览器不支持Video标签。</video>
+      >Your browser does not support the Video tag.</video>
     </div>
     <!-- 缓冲动画 -->
     <!-- <d-waitingloading text="正在缓冲..." v-show="state.waitingLoading" /> -->
@@ -135,7 +127,7 @@
           </div>
           <!-- 倍速播放 -->
           <div class="d-tool-item speedRate-btn" v-if="props.controlBtns.includes('speedRate')">
-            {{ state.speedActive == "1.0" ? "倍速" : state.speedActive + "x" }}
+            {{ state.speedActive == "1.0" ? "Playback speed" : state.speedActive + "x" }}
             <div class="d-tool-item-main">
               <ul class="speed-main">
                 <li
@@ -180,15 +172,15 @@
             <div class="d-tool-item-main">
               <ul class="speed-main">
                 <li>
-                  镜像画面
+                   Mirror image
                   <d-switch @change="mirrorChange" v-model="state.mirror" />
                 </li>
                 <li>
-                  循环播放
+                   Loop
                   <d-switch @change="loopChange" v-model="state.loop" />
                 </li>
                 <li>
-                  关灯模式
+                   Light off mode
                   <d-switch @change="lightOffChange" v-model="state.lightOff" />
                 </li>
               </ul>
@@ -201,7 +193,7 @@
             @click="requestPictureInPictureHandle"
           >
             <d-icon size="20" icon="icon-pip"></d-icon>
-            <div class="d-tool-item-main">画中画</div>
+            <div class="d-tool-item-main">Picture-in-picture</div>
           </div>
           <!-- 网页全屏 -->
           <div
@@ -210,7 +202,7 @@
             @click="state.webFullScreen = !state.webFullScreen"
           >
             <d-icon size="20" icon="icon-web-screen"></d-icon>
-            <div class="d-tool-item-main">网页全屏</div>
+            <div class="d-tool-item-main">Page full screen</div>
           </div>
           <!-- 全屏 -->
           <div
@@ -218,7 +210,7 @@
             v-if="props.controlBtns.includes('fullScreen')"
             @click="toggleFullScreenHandle"
           >
-            <div class="d-tool-item-main">全屏</div>
+            <div class="d-tool-item-main">Full screen</div>
             <d-icon size="20" icon="icon-screen"></d-icon>
           </div>
         </div>
@@ -339,7 +331,6 @@ videoEvents["onDurationchange"] = (ev) => {
 
 // 缓冲下载中
 videoEvents["onProgress"] = (ev) => {
-  console.log("缓冲中...");
   emits("progress", ev);
   let duration = ev.target.duration; // 媒体总长
   let length = ev.target.buffered;

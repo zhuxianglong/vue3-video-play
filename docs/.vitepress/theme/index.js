@@ -1,10 +1,3 @@
-/*
- * @Author: web.王晓冬
- * @Date: 2021-08-21 15:12:41
- * @LastEditors: web.王晓冬
- * @LastEditTime: 2021-08-31 14:57:41
- * @Description: file content
- */
 import theme from 'vitepress/dist/client/theme-default'
 import 'vitepress-theme-demoblock/theme/styles/index.css'
 import './styles/index.css'

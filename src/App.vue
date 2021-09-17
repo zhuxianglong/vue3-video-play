@@ -1,17 +1,10 @@
-/*
- * @Author: web.王晓冬
- * @Date: 2021-08-20 19:10:57
- * @LastEditors: web.王晓冬
- * @LastEditTime: 2021-09-01 12:00:11
- * @Description: file content
-*/
 <template>
   <!-- <div style="height:150px; margin-top:100px">
     <d-slider v-model="options.volume"></d-slider>
   </div>-->
   <div style="text-align: center">
     <button
-      @click="options.src = 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8'"
+      @click="options.src = 'https://litlive-public-resources.s3-us-west-1.amazonaws.com/images/9cafc8c04946012a273a66ec17c17b14509e21905d9329c1e880998464be513d.mp4'"
     >{{ options.src }}</button>
     <videoPlay ref="video" style="display: inline-block; width: 100%" v-bind="options" />
   </div>
@@ -27,7 +20,7 @@ const options = reactive({
   color: "#409eff",
   muted: false, //静音
   webFullScreen: false,
-  autoPlay: false, //自动播放
+  autoPlay: true, //自动播放
   currentTime: 0,
   loop: false, //循环播放
   mirror: false, //镜像画面

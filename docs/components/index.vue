@@ -1,10 +1,3 @@
-/*
- * @Author: web.王晓冬
- * @Date: 2021-08-21 19:20:46
- * @LastEditors: web.王晓冬
- * @LastEditTime: 2021-09-15 23:18:12
- * @Description: file content
-*/
 <template>
     <div style="text-align:center;margin-top:20px">
         <div class="video-main">
