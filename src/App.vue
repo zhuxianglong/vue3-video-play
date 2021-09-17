@@ -15,25 +15,21 @@ import { reactive, ref, nextTick } from "vue";
 import { videoPlay } from "../lib/index.js";
 
 const options = reactive({
-  width: "800px",
-  height: "450px",
-  color: "#409eff",
-  muted: false, //静音
-  webFullScreen: false,
-  autoPlay: true, //自动播放
-  currentTime: 0,
-  loop: false, //循环播放
-  mirror: false, //镜像画面
-  ligthOff: false, //关灯模式
-  volume: 0.3, //默认音量大小
-  control: true, //是否显示控制器
-  title: "", //视频名称
-  type: 'm3u8',
-  src: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", //视频源
-  // src: "https://go.dreamwq.com/videos/IronMan.mp4", //视频源
-  // src: "https://logos-channel.scaleengine.net/logos-channel/live/biblescreen-ad-free/playlist.m3u8", //视频源
-  poster: "https://go.dreamwq.com/videos/ironMan.jpg", //封面
-  controlBtns: ['audioTrack', 'quality', 'speedRate', 'volume', 'setting', 'pip', 'pageFullScreen', 'fullScreen'],
+    width: '800px', //播放器高度
+    height: '450px', //播放器高度
+    color: "#409eff", //主题色
+    title: '', //视频名称
+    src: "https://go.dreamwq.com/videos/IronMan.mp4", //视频源
+    muted: false, //静音
+    webFullScreen: false,
+    speedRate: ["0.75", "1.0", "1.25", "1.5", "2.0"], //播放倍速
+    autoPlay: true, //自动播放
+    loop: false, //循环播放
+    mirror: false, //镜像画面
+    ligthOff: false,  //关灯模式
+    volume: 0.3, //默认音量大小
+    control: true, //是否显示控制
+    controlBtns:['audioTrack', 'quality', 'speedRate', 'volume', 'setting', 'pip', 'pageFullScreen', 'fullScreen'] //显示所有按钮,
 });
 const video = ref(null);
 

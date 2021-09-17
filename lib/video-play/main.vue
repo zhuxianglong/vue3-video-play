@@ -522,7 +522,7 @@ const toggleFullScreenHandle = () => {
 
 const init = (): void => {
   if (state.dVideo.canPlayType(props.type) || state.dVideo.canPlayType('application/vnd.apple.mpegurl')) {
-    state.muted = props.autoPlay
+    // state.muted = props.autoPlay
     // state.dVideo.load();
   }
   // // 使用hls解码
